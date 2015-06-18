@@ -1,0 +1,5 @@
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Utils\Databases.MongoDB\build\v1.1\bin\AnyCPU\debug\TAMU.GeoInnovation.Common.Utils.Databases.MongoDB.dll
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Utils\Databases.MongoDB\build\v1.1\bin\AnyCPU\debug\TAMU.GeoInnovation.Common.Utils.Databases.MongoDB.pdb
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Utils\Databases.MongoDB\src\obj\Debug\Common.Utils.Databases.MongoDB.csprojResolveAssemblyReference.cache
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Utils\Databases.MongoDB\src\obj\Debug\TAMU.GeoInnovation.Common.Utils.Databases.MongoDB.dll
+C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Utils\Databases.MongoDB\src\obj\Debug\TAMU.GeoInnovation.Common.Utils.Databases.MongoDB.pdb
