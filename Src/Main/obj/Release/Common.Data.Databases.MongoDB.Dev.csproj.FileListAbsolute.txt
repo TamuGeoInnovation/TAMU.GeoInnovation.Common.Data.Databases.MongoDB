@@ -1,0 +1,3 @@
+C:\DevSource\Tamu\GeoInnovation\Common.Data.Databases.MongoDB\Src\Main\obj\Release\Common.Data.Databases.MongoDB.Dev.csprojResolveAssemblyReference.cache
+C:\DevSource\Tamu\GeoInnovation\Common.Data.Databases.MongoDB\Src\Main\obj\Release\TAMU.GeoInnovation.Common.Data.Databases.MongoDB.dll
+C:\DevSource\Tamu\GeoInnovation\Common.Data.Databases.MongoDB\build\1.0.0\AnyCPU\release\TAMU.GeoInnovation.Common.Data.Databases.MongoDB.dll
