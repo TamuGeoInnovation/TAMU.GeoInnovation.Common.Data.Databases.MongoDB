@@ -1,3 +1,0 @@
-C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Utils\Databases.MongoDB\build\v1.1\bin\AnyCPU\release\TAMU.GeoInnovation.Common.Utils.Databases.MongoDB.dll
-C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Utils\Databases.MongoDB\src\obj\Release\Common.Utils.Databases.MongoDB.csprojResolveAssemblyReference.cache
-C:\Dev\VS2008DotNetDevelopment\USC\GISResearchLab\Common\Utils\Databases.MongoDB\src\obj\Release\TAMU.GeoInnovation.Common.Utils.Databases.MongoDB.dll
