@@ -111,7 +111,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             }
         }
 
-        public override void CreateImportStatusStateTable(string tableName, bool restart)
+        public override void CreateImportStatusStateTable(string tableName, bool restart, bool shouldRemoveStatusTablesFirst)
         {
             try
             {
@@ -125,7 +125,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 
                         MongoDatabase database = mongoServer.GetDatabase(DefaultDatabase);
 
-                        if (restart)
+                        if (restart || shouldRemoveStatusTablesFirst)
                         {
                             if (database.CollectionExists(tableName))
                             {
@@ -196,7 +196,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             }
         }
 
-        public override void CreateImportStatusCountyTable(string tableName, bool restart)
+        public override void CreateImportStatusCountyTable(string tableName, bool restart, bool shouldRemoveStatusTablesFirst)
         {
             try
             {
@@ -210,7 +210,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 
                         MongoDatabase database = mongoServer.GetDatabase(DefaultDatabase);
 
-                        if (restart)
+                        if (restart || shouldRemoveStatusTablesFirst)
                         {
                             if (database.CollectionExists(tableName))
                             {
@@ -274,7 +274,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             }
         }
 
-        public override void CreateImportStatusFileTable(string tableName, bool restart)
+        public override void CreateImportStatusFileTable(string tableName, bool restart, bool shouldRemoveStatusTablesFirst)
         {
             try
             {
@@ -293,8 +293,8 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                             mongoDBConnection.Database = DefaultDatabase;
                         }
 
-                        
-                        if (restart)
+
+                        if (restart || shouldRemoveStatusTablesFirst)
                         {
                             if (database.CollectionExists(tableName))
                             {
