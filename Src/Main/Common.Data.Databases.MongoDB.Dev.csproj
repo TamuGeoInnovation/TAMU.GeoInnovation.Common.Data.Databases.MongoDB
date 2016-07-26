@@ -135,11 +135,6 @@
       <Name>Common.Core.ExceptionHandling.Dev</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Common.Core.Geo.Geometries\Src\Main\Common.Core.Geo.Geometries.Dev.csproj">
-      <Project>{E8164C90-2753-46F3-937A-653039318563}</Project>
-      <Name>Common.Core.Geo.Geometries.Dev</Name>
-      <Private>False</Private>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Common.Core.Logging.TraceEvents\Src\Main\Common.Core.Logging.TraceEvents.Dev.csproj">
       <Project>{9F19062E-A949-4FF8-8DC1-7239F06348DF}</Project>
       <Name>Common.Core.Logging.TraceEvents.Dev</Name>
