@@ -1,7 +1,7 @@
-﻿using System;
+﻿using MongoDB.Driver;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using MongoDB.Driver;
 using USC.GISResearchLab.Common.Core.Databases;
 
 namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
@@ -55,13 +55,14 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             }
         }
 
-        
+
         public void Close()
         {
             MongoServer.Disconnect();
         }
 
-        public void Open() {
+        public void Open()
+        {
 
             MongoServer.Connect();
         }
@@ -70,7 +71,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         {
             // do nothing
             return null;
-            
+
         }
 
         public IDbTransaction BeginTransaction()
@@ -133,9 +134,9 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                         break;
 
                         // dan - was causing it not to compile
-                    //case MongoServerState.Unknown:
-                    //    ret = ConnectionState.Broken;
-                    //    break;
+                        //case MongoServerState.Unknown:
+                        //    ret = ConnectionState.Broken;
+                        //    break;
 
                 }
 

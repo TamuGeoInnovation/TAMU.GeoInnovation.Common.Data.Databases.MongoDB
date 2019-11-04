@@ -1,14 +1,14 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using MongoDB.Driver.GeoJsonObjectModel;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using MongoDB.Bson;
-using MongoDB.Driver;
 using USC.GISResearchLab.Common.Core.Databases.BulkCopys;
 using USC.GISResearchLab.Common.Databases.QueryManagers;
-using MongoDB.Driver.GeoJsonObjectModel;
-using USC.GISResearchLab.Common.Geometries.Polygons;
 using USC.GISResearchLab.Common.Geometries.Points;
-using System.Collections;
+using USC.GISResearchLab.Common.Geometries.Polygons;
 
 namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 {
@@ -19,7 +19,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 
         public MongoDBBulkCopy()
         {
-            
+
         }
 
 
@@ -28,7 +28,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             QueryManager = queryManager;
         }
 
-        
+
         public override void Close()
         {
             throw new NotImplementedException();
@@ -88,14 +88,14 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                     while (dataReader.Read())
                     {
 
-                        
+
                         BsonDocument bsonDocument = new BsonDocument();
                         // GeoJsonObject geoJsonObject = new GeoJsonObject;
 
                         if (dataReader["shapeGeogAsGeoJSON"] != null)
                         {
-                            List<Polygon> geogJson  = (List<Polygon>)dataReader["shapeGeogAsGeoJSON"];
-                            List<Polygon> geomJson  = (List<Polygon>)dataReader["shapeGeomAsGeoJSON"];
+                            List<Polygon> geogJson = (List<Polygon>)dataReader["shapeGeogAsGeoJSON"];
+                            List<Polygon> geomJson = (List<Polygon>)dataReader["shapeGeomAsGeoJSON"];
 
                             if (geogJson != null && geomJson != null)
                             {

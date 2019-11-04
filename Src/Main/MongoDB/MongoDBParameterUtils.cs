@@ -58,7 +58,7 @@ namespace USC.GISResearchLab.Common.Utils.Databases
             //return ret;
         }
 
-        
+
         public static SqlParameter BuildSqlUdtParameter(string name, string dbTypeName, object value)
         {
             SqlParameter ret = new SqlParameter(name, SqlDbType.Udt) { UdtTypeName = dbTypeName };

@@ -175,178 +175,179 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         }
 
 
-        public void  FromShowColumnsString(string type){
+        public void FromShowColumnsString(string type)
+        {
             throw new NotImplementedException("There is no DataType for MongoDB");
-        
-        //{
-        //    MySqlDbType ret = MySqlDbType.Text;
 
-        //    if (String.Compare(type, TYPENAME_BigInt, true) == 0)
-        //    {
-        //        ret = MySqlDbType.UInt64;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Binary, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Binary;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Bit, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Bit;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Blob, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Blob;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Byte, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Byte;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Char, true) == 0)
-        //    {
-        //        ret = MySqlDbType.VarChar;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Date, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Date;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Datetime, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Datetime;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Decimal, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Decimal;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Double, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Double;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Enum, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Enum;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Float, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Float;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Geometry, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Geometry;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Int, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Int32;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Int16, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Int16;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Int24, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Int24;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Int32, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Int32;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Int64, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Int64;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_LongBlob, true) == 0)
-        //    {
-        //        ret = MySqlDbType.LongBlob;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_LongText, true) == 0)
-        //    {
-        //        ret = MySqlDbType.LongText;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_MediumBlob, true) == 0)
-        //    {
-        //        ret = MySqlDbType.MediumBlob;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_MediumText, true) == 0)
-        //    {
-        //        ret = MySqlDbType.MediumText;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Newdate, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Newdate;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_NewDecimal, true) == 0)
-        //    {
-        //        ret = MySqlDbType.NewDecimal;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Set, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Set;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_String, true) == 0)
-        //    {
-        //        ret = MySqlDbType.String;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Text, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Text;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Time, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Time;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Timestamp, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Timestamp;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_TinyBlob, true) == 0)
-        //    {
-        //        ret = MySqlDbType.TinyBlob;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_TinyText, true) == 0)
-        //    {
-        //        ret = MySqlDbType.TinyText;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_UByte, true) == 0)
-        //    {
-        //        ret = MySqlDbType.UByte;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_UInt16, true) == 0)
-        //    {
-        //        ret = MySqlDbType.UInt16;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_UInt24, true) == 0)
-        //    {
-        //        ret = MySqlDbType.UInt24;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_UInt32, true) == 0)
-        //    {
-        //        ret = MySqlDbType.UInt32;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_UInt64, true) == 0)
-        //    {
-        //        ret = MySqlDbType.UInt64;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_VarBinary, true) == 0)
-        //    {
-        //        ret = MySqlDbType.VarBinary;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_VarChar, true) == 0)
-        //    {
-        //        ret = MySqlDbType.VarChar;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_VarString, true) == 0)
-        //    {
-        //        ret = MySqlDbType.VarString;
-        //    }
-        //    else if (String.Compare(type, TYPENAME_Year, true) == 0)
-        //    {
-        //        ret = MySqlDbType.Year;
-        //    }
-        //    else
-        //    {
-        //        throw new Exception("Unexpected or unimplemented FromShowColumnsString: " + type);
-        //    }
+            //{
+            //    MySqlDbType ret = MySqlDbType.Text;
 
-        //    return ret;
+            //    if (String.Compare(type, TYPENAME_BigInt, true) == 0)
+            //    {
+            //        ret = MySqlDbType.UInt64;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Binary, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Binary;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Bit, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Bit;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Blob, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Blob;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Byte, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Byte;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Char, true) == 0)
+            //    {
+            //        ret = MySqlDbType.VarChar;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Date, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Date;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Datetime, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Datetime;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Decimal, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Decimal;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Double, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Double;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Enum, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Enum;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Float, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Float;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Geometry, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Geometry;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Int, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Int32;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Int16, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Int16;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Int24, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Int24;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Int32, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Int32;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Int64, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Int64;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_LongBlob, true) == 0)
+            //    {
+            //        ret = MySqlDbType.LongBlob;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_LongText, true) == 0)
+            //    {
+            //        ret = MySqlDbType.LongText;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_MediumBlob, true) == 0)
+            //    {
+            //        ret = MySqlDbType.MediumBlob;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_MediumText, true) == 0)
+            //    {
+            //        ret = MySqlDbType.MediumText;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Newdate, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Newdate;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_NewDecimal, true) == 0)
+            //    {
+            //        ret = MySqlDbType.NewDecimal;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Set, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Set;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_String, true) == 0)
+            //    {
+            //        ret = MySqlDbType.String;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Text, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Text;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Time, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Time;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Timestamp, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Timestamp;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_TinyBlob, true) == 0)
+            //    {
+            //        ret = MySqlDbType.TinyBlob;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_TinyText, true) == 0)
+            //    {
+            //        ret = MySqlDbType.TinyText;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_UByte, true) == 0)
+            //    {
+            //        ret = MySqlDbType.UByte;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_UInt16, true) == 0)
+            //    {
+            //        ret = MySqlDbType.UInt16;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_UInt24, true) == 0)
+            //    {
+            //        ret = MySqlDbType.UInt24;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_UInt32, true) == 0)
+            //    {
+            //        ret = MySqlDbType.UInt32;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_UInt64, true) == 0)
+            //    {
+            //        ret = MySqlDbType.UInt64;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_VarBinary, true) == 0)
+            //    {
+            //        ret = MySqlDbType.VarBinary;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_VarChar, true) == 0)
+            //    {
+            //        ret = MySqlDbType.VarChar;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_VarString, true) == 0)
+            //    {
+            //        ret = MySqlDbType.VarString;
+            //    }
+            //    else if (String.Compare(type, TYPENAME_Year, true) == 0)
+            //    {
+            //        ret = MySqlDbType.Year;
+            //    }
+            //    else
+            //    {
+            //        throw new Exception("Unexpected or unimplemented FromShowColumnsString: " + type);
+            //    }
+
+            //    return ret;
         }
 
         public override object FromDatabaseSuperDataType(DatabaseSuperDataType type)

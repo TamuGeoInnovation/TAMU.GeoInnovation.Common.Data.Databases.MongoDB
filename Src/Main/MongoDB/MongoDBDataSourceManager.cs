@@ -1,5 +1,5 @@
-﻿using System;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
+using System;
 using USC.GISResearchLab.Common.Core.Databases;
 using USC.GISResearchLab.Common.Databases.ConnectionStringManagers;
 using USC.GISResearchLab.Common.Databases.DataSources;

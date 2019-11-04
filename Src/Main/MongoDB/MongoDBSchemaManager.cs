@@ -1,8 +1,8 @@
-﻿using System;
+﻿using MongoDB.Driver;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using MongoDB.Driver;
 using USC.GISResearchLab.Common.Core.Databases;
 using USC.GISResearchLab.Common.Core.Utils.Arrays;
 using USC.GISResearchLab.Common.Databases.QueryManagers;
@@ -24,7 +24,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 
         public MongoDBSchemaManager(string connectionString)
         {
-            
+
             DataProviderType = DataProviderType.MongoDB;
             DatabaseType = DatabaseType.MongoDB;
             ConnectionString = connectionString;
@@ -41,7 +41,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             QueryManager = new QueryManager(pathToDatabaseDlls, DataProviderType, DatabaseType, ConnectionString);
 
         }
-       
+
         public override void CreateDatabase()
         {
             throw new NotImplementedException();
@@ -193,7 +193,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 
         //public static MongoServer GetConnection(string dataSource, string catalog, string userName, string password)
         //{
-          
+
         //    MongoServer mongoServer = null;
         //    try
         //    {
@@ -258,7 +258,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 
         public string GetCreateTableStatement(string tableName)
         {
-                throw new NotImplementedException("MongoDB does not have columns");
+            throw new NotImplementedException("MongoDB does not have columns");
         }
 
         public override string[] GetDatabases()
@@ -311,31 +311,31 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 
             DataTable ret = null;
 
-          
+
             try
             {
 
-               MongoDBConnection mongoDBConnection  = (MongoDBConnection)QueryManager.Connection;
-               if (mongoDBConnection != null)
-               {
-                   MongoServer mongoServer = mongoDBConnection.MongoServer;
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)QueryManager.Connection;
+                if (mongoDBConnection != null)
+                {
+                    MongoServer mongoServer = mongoDBConnection.MongoServer;
 
-                   if (mongoServer != null)
-                   {
+                    if (mongoServer != null)
+                    {
 
 
-                       List<String> dbNames = (List<String>)mongoServer.GetDatabaseNames();
-                       ret = new DataTable();
-                       ret.Columns.Add(new DataColumn("name"));
+                        List<String> dbNames = (List<String>)mongoServer.GetDatabaseNames();
+                        ret = new DataTable();
+                        ret.Columns.Add(new DataColumn("name"));
 
-                       foreach (string name in dbNames)
-                       {
-                           DataRow dataRow = ret.NewRow();
-                           dataRow["name"] = name;
-                           ret.Rows.Add(dataRow);
-                       }
-                   }
-               }
+                        foreach (string name in dbNames)
+                        {
+                            DataRow dataRow = ret.NewRow();
+                            dataRow["name"] = name;
+                            ret.Rows.Add(dataRow);
+                        }
+                    }
+                }
 
             }
             catch (Exception ex)
@@ -393,7 +393,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         {
             DataTable ret = new DataTable();
 
-            MongoDBConnection mongoDBConnection  = (MongoDBConnection)QueryManager.Connection;
+            MongoDBConnection mongoDBConnection = (MongoDBConnection)QueryManager.Connection;
             if (mongoDBConnection != null)
             {
                 MongoServer mongoServer = mongoDBConnection.MongoServer;
@@ -404,7 +404,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                     List<String> names = (List<String>)database.GetCollectionNames();
 
 
-                    
+
                     ret.Columns.Add(new DataColumn("name"));
 
                     foreach (string name in names)
@@ -423,24 +423,24 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         {
             try
             {
-                 MongoDBConnection mongoDBConnection  = (MongoDBConnection)QueryManager.Connection;
-                 if (mongoDBConnection != null)
-                 {
-                     MongoServer mongoServer = mongoDBConnection.MongoServer;
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)QueryManager.Connection;
+                if (mongoDBConnection != null)
+                {
+                    MongoServer mongoServer = mongoDBConnection.MongoServer;
 
-                     if (mongoServer != null)
-                     {
+                    if (mongoServer != null)
+                    {
 
-                         MongoDatabase database = mongoServer.GetDatabase(DefaultDatabase);
+                        MongoDatabase database = mongoServer.GetDatabase(DefaultDatabase);
 
 
-                         if (database.CollectionExists(tableName))
-                         {
-                             database.DropCollection(tableName);
-                         }
+                        if (database.CollectionExists(tableName))
+                        {
+                            database.DropCollection(tableName);
+                        }
 
-                     }
-                 }
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -467,7 +467,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         public override string[] GetTableIndexes(string tableName)
         {
             string[] rv = null;
-            
+
             try
             {
                 MongoDBConnection mongoDBConnection = (MongoDBConnection)QueryManager.Connection;
@@ -481,9 +481,9 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                         MongoDatabase database = mongoServer.GetDatabase(DefaultDatabase);
 
                         GetIndexesResult indexResult = database.GetCollection(tableName).GetIndexes();
-                        for (int i =0; i<indexResult.Count;i++)
+                        for (int i = 0; i < indexResult.Count; i++)
                         {
-                            rv[i]=indexResult[i].Name;
+                            rv[i] = indexResult[i].Name;
                             rv = (string[])ArrayUtils.Add(rv, indexResult[i].Name);
                         }
 
@@ -496,7 +496,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                 throw new Exception(msg, ex);
             }
             return rv;
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public override string[] GetTableIndexes(string tableName, bool shouldOpenAndClose)
@@ -522,14 +522,14 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         {
             //Do Nothing TODO:
             return "";
-             throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public override string GetTableClusteredIndex(string tableName, bool shouldOpenAndClose)
         {
             return "";
             //Do Nothing TODO:
-          //  throw new NotImplementedException();
+            //  throw new NotImplementedException();
         }
 
         public override void AddGeogIndexToDatabase(string tableName)
@@ -543,8 +543,8 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 
                     if (mongoServer != null)
                     {
-                        IMongoIndexKeys keys = new IndexKeysDocument {{ "shapeGeogAsGeoJSON","2dsphere" },{ "type", 1 }};
-                        IMongoIndexOptions  opt= new IndexOptionsDocument();
+                        IMongoIndexKeys keys = new IndexKeysDocument { { "shapeGeogAsGeoJSON", "2dsphere" }, { "type", 1 } };
+                        IMongoIndexOptions opt = new IndexOptionsDocument();
                         mongoServer.GetDatabase(DefaultDatabase).GetCollection(tableName).EnsureIndex(keys, opt);
                     }
                 }

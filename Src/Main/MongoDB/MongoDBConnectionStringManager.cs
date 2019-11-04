@@ -38,8 +38,8 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             switch (dataProviderType)
             {
                 case DataProviderType.MongoDB:
-                    ret = "mongodb://" + UserName + ":" + Password + "@" + Location + ":" +27017;//"/" + DefaultDatabase;
-                   // ret = "mongodb://" + Location + ":" +27017 ;
+                    ret = "mongodb://" + UserName + ":" + Password + "@" + Location + ":" + 27017;//"/" + DefaultDatabase;
+                                                                                                  // ret = "mongodb://" + Location + ":" +27017 ;
                     break;
                 case DataProviderType.Odbc:
                     ret = "";

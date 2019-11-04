@@ -1,10 +1,10 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using MongoDB.Driver.Builders;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using MongoDB.Bson;
-using MongoDB.Driver;
-using MongoDB.Driver.Builders;
 using USC.GISResearchLab.Common.Core.Databases;
 using USC.GISResearchLab.Common.Databases.ImportStatusManagers;
 using USC.GISResearchLab.Common.Databases.QueryManagers;
@@ -16,7 +16,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
 {
     public class MongoDBImportStatusManager : AbstractImportStatusManager
     {
-       
+
 
         #region Properties
         //MongoDBConnectionStringManager mongoDBConnectionStringManager;
@@ -96,7 +96,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         {
             SchemaManager = SchemaManagerFactory.GetSchemaManager(pathToDatabaseDlls, providerType, connectionString);
         }
-        
+
 
         public override void InitializeConnections()
         {
@@ -115,7 +115,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         {
             try
             {
-                MongoDBConnection mongoDBConnection  = (MongoDBConnection)SchemaManager.QueryManager.Connection;
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)SchemaManager.QueryManager.Connection;
                 if (mongoDBConnection != null)
                 {
                     MongoServer mongoServer = mongoDBConnection.MongoServer;
@@ -200,7 +200,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         {
             try
             {
-                MongoDBConnection mongoDBConnection  = (MongoDBConnection)SchemaManager.QueryManager.Connection;
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)SchemaManager.QueryManager.Connection;
                 if (mongoDBConnection != null)
                 {
                     MongoServer mongoServer = mongoDBConnection.MongoServer;
@@ -278,7 +278,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
         {
             try
             {
-                MongoDBConnection mongoDBConnection  = (MongoDBConnection)SchemaManager.QueryManager.Connection;
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)SchemaManager.QueryManager.Connection;
                 if (mongoDBConnection != null)
                 {
                     MongoServer mongoServer = mongoDBConnection.MongoServer;
@@ -434,7 +434,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                     TraceSource.TraceEvent(TraceEventType.Verbose, (int)ProcessEvents.Completing, "checking county status: " + county);
                 }
 
-                MongoDBConnection mongoDBConnection  = (MongoDBConnection)SchemaManager.QueryManager.Connection;
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)SchemaManager.QueryManager.Connection;
                 if (mongoDBConnection != null)
                 {
                     MongoServer mongoServer = mongoDBConnection.MongoServer;
@@ -554,7 +554,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             return ret;
         }
 
-        
+
 
         public override bool UpdateStatusFile(string tableName, string state, string county, string file, Statuses status, string message)
         {
@@ -567,8 +567,8 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                 {
                     TraceSource.TraceEvent(TraceEventType.Verbose, (int)ProcessEvents.Completing, "updating file status: " + file + " status: " + status);
                 }
-                
-                MongoDBConnection mongoDBConnection  = (MongoDBConnection)SchemaManager.QueryManager.Connection;
+
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)SchemaManager.QueryManager.Connection;
                 if (mongoDBConnection != null)
                 {
                     MongoServer mongoServer = mongoDBConnection.MongoServer;
@@ -641,7 +641,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             return ret;
         }
 
-        
+
 
         public override bool UpdateStatusState(string tableName, string state, Statuses status, string message)
         {
@@ -653,8 +653,8 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                 {
                     TraceSource.TraceEvent(TraceEventType.Verbose, (int)ProcessEvents.Completing, "updating state status: " + state + " status: " + status);
                 }
-                
-                MongoDBConnection mongoDBConnection  = (MongoDBConnection)SchemaManager.QueryManager.Connection;
+
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)SchemaManager.QueryManager.Connection;
                 if (mongoDBConnection != null)
                 {
                     MongoServer mongoServer = mongoDBConnection.MongoServer;
@@ -743,7 +743,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
             return ret;
         }
 
-       
+
 
         public override bool UpdateStatusCounty(string tableName, string state, string county, Statuses status, string message)
         {
@@ -757,7 +757,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                     TraceSource.TraceEvent(TraceEventType.Verbose, (int)ProcessEvents.Completing, "updating county status: " + county + " status: " + status);
                 }
 
-                MongoDBConnection mongoDBConnection  = (MongoDBConnection)SchemaManager.QueryManager.Connection;
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)SchemaManager.QueryManager.Connection;
                 if (mongoDBConnection != null)
                 {
                     MongoServer mongoServer = mongoDBConnection.MongoServer;
@@ -861,7 +861,7 @@ namespace TAMU.GeoInnovation.Common.Utils.Databases.MongoDB
                 //sql += " } ";
                 //sql += " )";
 
-                MongoDBConnection mongoDBConnection  = (MongoDBConnection)SchemaManager.QueryManager.Connection;
+                MongoDBConnection mongoDBConnection = (MongoDBConnection)SchemaManager.QueryManager.Connection;
                 if (mongoDBConnection != null)
                 {
                     MongoServer mongoServer = mongoDBConnection.MongoServer;
