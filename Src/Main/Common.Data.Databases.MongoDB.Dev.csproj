@@ -151,11 +151,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Common.Core.ExceptionHandling\Src\Main\Common.Core.ExceptionHandling.Dev.csproj">
-      <Project>{4A553AE2-F5D1-42B6-BE3A-8442DF626EAF}</Project>
-      <Name>Common.Core.ExceptionHandling.Dev</Name>
-      <Private>False</Private>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Common.Core.Geo.Geometries\Src\Main\Common.Core.Geo.Geometries.Dev.csproj">
       <Project>{e8164c90-2753-46f3-937a-653039318563}</Project>
       <Name>Common.Core.Geo.Geometries.Dev</Name>
